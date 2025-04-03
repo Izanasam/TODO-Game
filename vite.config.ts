@@ -59,6 +59,7 @@ export default defineConfig({
 			input: {
 				main: resolve(__dirname, "index.html"),
 			},
+			external: ["/src/main.tsx"],
 			output: {
 				manualChunks: {
 					vendor: ["react", "react-dom"],
