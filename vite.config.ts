@@ -34,7 +34,7 @@ export default defineConfig({
 				],
 			},
 			workbox: {
-				globPatterns: ["**/*.{js,css,html,png,svg,json}"],
+				globPatterns: ["**/*.{js,css,html,png,svg,json,webmanifest}"],
 				runtimeCaching: [
 					{
 						urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -59,7 +59,6 @@ export default defineConfig({
 			input: {
 				main: resolve(__dirname, "index.html"),
 			},
-			external: ["/src/main.tsx"],
 			output: {
 				manualChunks: {
 					vendor: ["react", "react-dom"],
@@ -77,7 +76,7 @@ export default defineConfig({
 		port: 4175,
 		strictPort: true,
 	},
-	base: "/",
+	base: "./",
 	resolve: {
 		alias: {
 			"@": resolve(__dirname, "src"),
