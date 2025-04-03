@@ -76,7 +76,7 @@ export default defineConfig({
 		port: 4175,
 		strictPort: true,
 	},
-	base: "/",
+	base: "./",
 	resolve: {
 		alias: {
 			"@": resolve(__dirname, "src"),
