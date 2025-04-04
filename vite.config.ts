@@ -54,6 +54,10 @@ export default defineConfig({
 			},
 			includeAssets: ["**/*"],
 			strategies: "generateSW",
+			devOptions: {
+				enabled: true,
+				type: "module",
+			},
 		}),
 	],
 	build: {
@@ -67,6 +71,9 @@ export default defineConfig({
 				},
 			},
 		},
+		outDir: "dist",
+		assetsDir: "assets",
+		emptyOutDir: true,
 	},
 	server: {
 		host: true,
@@ -78,7 +85,7 @@ export default defineConfig({
 		port: 4175,
 		strictPort: true,
 	},
-	base: "./",
+	base: "/",
 	resolve: {
 		alias: {
 			"@": resolve(__dirname, "src"),

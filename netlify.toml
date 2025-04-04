@@ -19,6 +19,12 @@
     Content-Type = "application/manifest+json"
     Cache-Control = "no-cache"
 
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+    Service-Worker-Allowed = "/"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -26,4 +32,5 @@
 
 [build.environment]
   NODE_VERSION = "18"
-  VITE_BASE_URL = "./" 
+  VITE_BASE_URL = "/"
+  NODE_ENV = "production" 
