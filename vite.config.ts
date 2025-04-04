@@ -52,6 +52,8 @@ export default defineConfig({
 					},
 				],
 			},
+			includeAssets: ["**/*"],
+			strategies: "generateSW",
 		}),
 	],
 	build: {
